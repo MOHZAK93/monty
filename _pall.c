@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pall - prints all the values on the stack, starting from the top
+ * _pall - prints all the values on the stack, starting from the top
  *
  * @stack: head of the stack
  * @line_num: line of file being executed
