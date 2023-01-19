@@ -1,4 +1,4 @@
-#define  _GNU_SOURCE
+#define _GNU_SOURCE
 #include "monty.h"
 
 var_t var;
@@ -25,7 +25,7 @@ int main(int ac, char **av)
 	if (ac != 2)
 	{
 		fprintf(stderr,
-				"Usage: monty file\n");
+				"USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	fs = fopen(av[1], "r");
