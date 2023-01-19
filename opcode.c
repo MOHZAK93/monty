@@ -15,8 +15,8 @@ void get_op(char *op, stack_t **stack, unsigned int line_num)
 	size_t i;
 
 	instruction_t operator[] = {
-		{"push", push},
-		{"pall", pall},
+		{"push", _push},
+		{"pall", _pall},
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
