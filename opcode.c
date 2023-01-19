@@ -17,7 +17,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_num)
 	instruction_t operator[] = {
 		{"push", _push},
 		{"pall", _pall},
-		{"pint", pint},
+		{"pint", _pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
