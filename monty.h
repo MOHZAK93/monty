@@ -59,7 +59,7 @@ void _push(stack_t **stack, unsigned int line_num);
 void push_x(stack_t **stack, int n);
 void _pall(stack_t **stack, unsigned int line_num);
 void _pint(stack_t **stack, unsigned int line_num);
-void pop(stack_t **stack, unsigned int line_num);
+void _pop(stack_t **stack, unsigned int line_num);
 void swap(stack_t **stack, unsigned int line_num);
 void add(stack_t **stack, unsigned int line_num);
 void _nop(stack_t **stack, unsigned int line_num);
