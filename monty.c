@@ -46,5 +46,7 @@ int main(int ac, char **av)
 			get_op(op, &head, line_num);
 		}
 	}
+	free(lineptr);
+	free(op);
 	exit(EXIT_SUCCESS);
 }
