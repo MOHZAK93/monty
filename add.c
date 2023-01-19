@@ -22,5 +22,5 @@ void add(stack_t **stack, unsigned int line_num)
 	}
 	*stack = (*stack)->next;
 	(*stack)->n = (*stack)->n + temp->n;
-	pop(&temp, line_num);
+	_pop(&temp, line_num);
 }
