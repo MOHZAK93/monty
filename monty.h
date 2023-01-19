@@ -56,12 +56,11 @@ typedef struct instruction_s
 
 void get_op(char *op, stack_t **stack, unsigned int line_num);
 void _push(stack_t **stack, unsigned int line_num);
-void push_x(stack_t **stack, int n);
 void _pall(stack_t **stack, unsigned int line_num);
 void _pint(stack_t **stack, unsigned int line_num);
 void _pop(stack_t **stack, unsigned int line_num);
-void swap(stack_t **stack, unsigned int line_num);
-void add(stack_t **stack, unsigned int line_num);
+void _swap(stack_t **stack, unsigned int line_num);
+void _add(stack_t **stack, unsigned int line_num);
 void _nop(stack_t **stack, unsigned int line_num);
 void free_stack(int status, void *arg);
 void free_lineptr(int status, void *arg);
