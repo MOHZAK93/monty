@@ -25,4 +25,5 @@ void _add(stack_t **stack, unsigned int line_num)
 	sum = (*stack)->n + temp->n;
 	(*stack)->n = sum;
 	_pop(&temp, line_num);
+	var.stack_len--;
 }
