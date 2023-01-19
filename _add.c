@@ -11,7 +11,7 @@
 
 void _add(stack_t **stack, unsigned int line_num)
 {
-	int sum = 0;
+	size_t sum = 0;
 
 	if (var.stack_len < 2)
 	{
