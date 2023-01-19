@@ -24,7 +24,9 @@ void get_op(char *op, stack_t **stack, unsigned int line_num)
 		{"nop", _nop},
 		{"sub", _sub},
 		{"div", _div},
-		{NULL, NULL}};
+		{"mul", _mul},
+		{NULL, NULL}
+	};
 
 	for (i = 0; operator[i].opcode != NULL; i++)
 	{
