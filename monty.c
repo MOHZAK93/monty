@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#define  _GNU_SOURCE
 #include "monty.h"
 
 var_t var;
@@ -24,17 +23,18 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		dprintf(STDOUT_FILENO, "Usage: monty file\n");
+		fprintf(stdout,
+				"Usage: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	fs = fopen(av[1], "r");
 	if (fs == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
+		fprintf(stderr,
+				"Error: Can't open file %s\n",
+				av[1]);
 		exit(EXIT_FAILURE);
 	}
-	/*on_exit(free_lineptr, &lineptr);
-	on_exit(free_stack, &stack);*/
 
 	while (getline(&lineptr, &n, fs) != -1)
 	{

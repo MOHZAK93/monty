@@ -15,12 +15,12 @@ void add(stack_t **stack, unsigned int line_num)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDERR_FILENO, "L%u: can't swap, stack too short\n", line_num);
+		fprintf(stderr,
+				"L%u: can't swap, stack too short\n",
+				line_num);
 		exit(EXIT_FAILURE);
 	}
 	*stack = (*stack)->next;
 	(*stack)->n = (*stack)->n + temp->n;
 	pop(&temp, line_num);
-	return;
-	
 }

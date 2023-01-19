@@ -17,7 +17,9 @@ void pall(stack_t **stack, unsigned int line_num)
 	head = *stack;
 	while (head != NULL)
 	{
-		dprintf(STDOUT_FILENO, "%d\n", head->n);
+		fprintf(stdout,
+				"%d\n",
+				head->n);
 		head = head->next;
 		if (head == *stack)
 			return;

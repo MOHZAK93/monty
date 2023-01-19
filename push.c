@@ -1,6 +1,14 @@
 #include "monty.h"
 #include <ctype.h>
 
+/**
+ * check_for_digit - function to check for digit after opcode
+ *
+ * @arg: character to be checked for digit
+ *
+ * Return: integer
+ */
+
 static int check_for_digit(char *arg)
 {
 	int i;
@@ -14,7 +22,14 @@ static int check_for_digit(char *arg)
 	}
 	return (0);
 }
-
+/**
+ * push - increases length of stack for additional nodes
+ *
+ * @stack: head of the stack
+ * @line_num: line being executed
+ *
+ * Return: nothing
+ */
 void push(stack_t **stack, unsigned int line_num)
 {
 	char *arg;
@@ -23,13 +38,16 @@ void push(stack_t **stack, unsigned int line_num)
 	arg = strtok(NULL, "\n\t\r ");
 	if (arg == NULL || check_for_digit(arg))
 	{
-		dprintf(STDOUT_FILENO, "L%u: usage: push integer\n", line_num);
+		fprintf(stderr,
+				"L%u: usage: push integer\n",
+				line_num);
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(arg);
 	if (!add_node(stack, n))
 	{
-		dprintf(STDOUT_FILENO, "Error: malloc failed");
+		fprintf(stderr,
+				"Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	var.stack_len++;
