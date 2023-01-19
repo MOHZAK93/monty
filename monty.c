@@ -60,7 +60,7 @@ int main(int ac, char **av)
 	{
 		line_num++;
 		op = strtok(lineptr, "\n\t\r ");
-		if (op != NULL)
+		if (op != NULL && *op != '#')
 		{
 			get_op(op, &head, line_num);
 		}
