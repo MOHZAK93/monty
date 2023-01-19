@@ -11,7 +11,7 @@
 
 void _add(stack_t **stack, unsigned int line_num)
 {
-	size_t sum = 0;
+	stack_t *temp = *stack;
 
 	if (var.stack_len < 2)
 	{
@@ -20,7 +20,7 @@ void _add(stack_t **stack, unsigned int line_num)
 				line_num);
 		exit(EXIT_FAILURE);
 	}
-	sum += (*stack)->n;
-	_pop(stack, line_num);
-	(*stack)->n += sum;
+	(*stack) = (*stack)->next;
+	(*stack)->n = (*stack)->n + temp->n;
+	_pop(&temp, line_num);
 }
