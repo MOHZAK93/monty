@@ -2,6 +2,23 @@
 #include "monty.h"
 
 var_t var;
+
+/**
+ * close_monty_file - close monty file
+ *
+ * @status: exit status
+ * @arg: file pointer
+ */
+void close_monty_file(int status, void *arg)
+{
+	FILE *fs;
+
+	fs = (FILE *)arg;
+	(void)status;
+	if (fs)
+		fclose(fs);
+}
+
 /**
  * main - Monty bytecode interpreter
  *
@@ -38,7 +55,7 @@ int main(int ac, char **av)
 	}
 	on_exit(free_lineptr, &lineptr);
 	on_exit(free_stack, &head);
-
+	on_exit(close_monty_file, fs);
 	while (getline(&lineptr, &n, fs) != -1)
 	{
 		line_num++;

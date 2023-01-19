@@ -23,7 +23,7 @@ static int check_for_digit(char *arg)
 	return (0);
 }
 /**
- * push - increases length of stack for additional nodes
+ * _push - increases length of stack for additional nodes
  *
  * @stack: head of the stack
  * @line_num: line being executed
