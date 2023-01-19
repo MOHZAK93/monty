@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 /**
- * var_s - struct to contain the main variables of the Monty
+ * struct var_s - struct to contain the main variables of the Monty
  *
  * @queue: flag to determine if in stack vs queue mode
  * @stack_len: length of the stack
