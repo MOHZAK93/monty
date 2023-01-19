@@ -63,5 +63,7 @@ void pop(stack_t **stack, unsigned int line_num);
 void swap(stack_t **stack, unsigned int line_num);
 void add(stack_t **stack, unsigned int line_num);
 void nop(stack_t **stack, unsigned int line_num);
+void free_stack(int status, void *arg);
+void free_lineptr(int status, void *arg);
 stack_t *add_node(stack_t **stack, const int n);
 #endif

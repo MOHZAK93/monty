@@ -36,6 +36,8 @@ int main(int ac, char **av)
 				av[1]);
 		exit(EXIT_FAILURE);
 	}
+	on_exit(free_lineptr, &lineptr);
+	on_exit(free_stack, &head);
 
 	while (getline(&lineptr, &n, fs) != -1)
 	{
@@ -46,7 +48,5 @@ int main(int ac, char **av)
 			get_op(op, &head, line_num);
 		}
 	}
-	free(lineptr);
-	free(op);
 	exit(EXIT_SUCCESS);
 }
