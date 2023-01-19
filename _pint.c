@@ -24,6 +24,6 @@ void _pint(stack_t **stack, unsigned int line_num)
 	}
 	else
 	{
-		fprintf(stderr, "%d\n", head->n);
+		fprintf(stdout, "%d\n", head->n);
 	}
 }
