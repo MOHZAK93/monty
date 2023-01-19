@@ -8,6 +8,12 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+/**
+ * var_s - struct to contain the main variables of the Monty
+ *
+ * @queue: flag to determine if in stack vs queue mode
+ * @stack_len: length of the stack
+ */
 typedef struct var_s
 {
 	int queue;
@@ -52,5 +58,10 @@ void get_op(char *op, stack_t **stack, unsigned int line_num);
 void push(stack_t **stack, unsigned int line_num);
 void push_x(stack_t **stack, int n);
 void pall(stack_t **stack, unsigned int line_num);
+void pint(stack_t **stack, unsigned int line_num);
+void pop(stack_t **stack, unsigned int line_num);
+void swap(stack_t **stack, unsigned int line_num);
+void add(stack_t **stack, unsigned int line_num);
+void nop(stack_t **stack, unsigned int line_num);
 stack_t *add_node(stack_t **stack, const int n);
 #endif
