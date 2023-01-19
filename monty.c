@@ -4,6 +4,7 @@
 var_t var;
 /**
  * main - Monty bytecode interpreter
+ *
  * @ac: number of argements
  * @av: array of argument strings
  *
@@ -23,7 +24,7 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		fprintf(stdout,
+		fprintf(stderr,
 				"Usage: monty file\n");
 		exit(EXIT_FAILURE);
 	}
