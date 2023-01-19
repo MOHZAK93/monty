@@ -23,8 +23,8 @@ void get_op(char *op, stack_t **stack, unsigned int line_num)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
-		{NULL, NULL}
-	};
+		{"div", _div},
+		{NULL, NULL}};
 
 	for (i = 0; operator[i].opcode != NULL; i++)
 	{
