@@ -16,7 +16,7 @@ void _add(stack_t **stack, unsigned int line_num)
 	if (var.stack_len < 2)
 	{
 		fprintf(stderr,
-				"L%u: can't swap, stack too short\n",
+				"L%u: can't add, stack too short\n",
 				line_num);
 		exit(EXIT_FAILURE);
 	}
