@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <ctype.h>
 
 /**
  * _pstr - prints the string starting at the top of the stack
@@ -9,16 +10,18 @@
 void _pstr(stack_t **stack, unsigned int line_num)
 {
 	stack_t *head = *stack;
+
 	(void)line_num;
 	while (1)
 	{
-		if (!(*stack) || (*stack)->n <= 0 || (*stack)->n > 127 || *stack == NULL)
+		if ((*stack)->n == 0 || (*stack)->n < 0 || (*stack)->n > 127)
 		{
-			printf("\n");
 			break;
 		}
 		printf("%c", (*stack)->n);
 		*stack = (*stack)->next;
-		_pop(&head, line_num);
+		if (head == *stack)
+			break;
 	}
+	printf("\n");
 }
