@@ -27,6 +27,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_num)
 		{"mul", _mul},
 		{"mod", _mod},
 		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}
 	};
 
