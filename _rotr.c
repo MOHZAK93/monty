@@ -9,6 +9,5 @@
 void _rotr(stack_t **stack, unsigned int line_num)
 {
 	(void)line_num;
-	
 	(*stack) = (*stack)->prev;
 }
