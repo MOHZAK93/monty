@@ -8,10 +8,8 @@
  */
 void _pstr(stack_t **stack, unsigned int line_num)
 {
-	int written = 0;
-	stack_t *head = *stack;
+	stack_t *head;
 
-	(void)line_num;
 	if (var.stack_len == 0)
 	{
 		printf("\n");
@@ -19,14 +17,14 @@ void _pstr(stack_t **stack, unsigned int line_num)
 	}
 	while (1)
 	{
-		if (!head || head->n <= 0 || head->n > 127)
+		head = *stack;
+		if (!(*stack) || (*stack)->n <= 0 || (*stack)->n > 127)
 		{
-			if (written)
-				printf("\n");
-			return;
+			printf("\n");
+			break;
 		}
-		printf("%c", head->n);
-		head = head->next;
-		written++;
+		printf("%c", (*stack)->n);
+		*stack = (*stack)->next;
+		_pop(&head, line_num);
 	}
 }
