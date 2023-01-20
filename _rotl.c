@@ -8,9 +8,6 @@
  */
 void _rotl(stack_t **stack, unsigned int line_num)
 {
-	/*stack_t *head = *stack;*/
-
 	(void)line_num;
 	*stack = (*stack)->next;
-
 }
