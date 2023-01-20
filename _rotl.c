@@ -9,5 +9,5 @@
 void _rotl(stack_t **stack, unsigned int line_num)
 {
 	(void)line_num;
-	*stack = (*stack)->next;
+	(*stack) = (*stack)->next;
 }
