@@ -70,6 +70,8 @@ void _pchar(stack_t **stack, unsigned int line_num);
 void _pstr(stack_t **stack, unsigned int line_num);
 void _rotl(stack_t **stack, unsigned int line_num);
 void _rotr(stack_t **stack, unsigned int line_num);
+void _stack(stack_t **stack, unsigned int line_num);
+void _queue(stack_t **stack, unsigned int line_num);
 void free_stack(int status, void *arg);
 void free_lineptr(int status, void *arg);
 stack_t *add_node(stack_t **stack, const int n);

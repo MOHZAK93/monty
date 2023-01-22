@@ -37,7 +37,7 @@ int main(int ac, char **av)
 	size_t n = 0;
 
 	var.stack_len = 0;
-	var.queue = 0;
+	var.queue = STACK;
 
 	if (ac != 2)
 	{
